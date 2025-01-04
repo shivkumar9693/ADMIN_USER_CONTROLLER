@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    flex-direction: column;
+}
+
+/* Blinking Color Effect for Heading */
+.blinking {
+    font-size: 36px;
+    font-weight: bold;
+    color: red;
+    animation: colorBlink 2s linear infinite, moveLeftRight 6s linear infinite; /* Adjusted to 6s for medium speed */
+    position: absolute;  /* Allows us to position it freely on the screen */
+    top: 10%;  /* Position it above the form */
+    left: -100%;  /* Start the heading off the left side of the screen */
+}
+
+/* Animation for changing colors */
+@keyframes colorBlink {
+    0% {
+        color: #3498db;  /* Blue */
+    }
+    25% {
+        color: #e74c3c;  /* Red */
+    }
+    50% {
+        color: #2ecc71;  /* Green */
+    }
+    75% {
+        color: #f39c12;  /* Yellow */
+    }
+    100% {
+        color: #3498db;  /* Blue */
+    }
+}
+
+/* Animation for moving Heading from Left to Right (Above Form) */
+@keyframes moveLeftRight {
+    0% {
+        left: -100%;  /* Start off the screen to the left */
+    }
+    100% {
+        left: 100%;  /* Move to the right side of the screen */
+    }
+}
+
+/* Form Container with Border Animation */
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: borderBlink 3s linear infinite;  /* Apply border color animation */
+}
+
+/* Border Animation for Form */
+@keyframes borderBlink {
+    0% {
+        border: 4px solid #3498db;  /* Blue */
+    }
+    25% {
+        border: 4px solid #e74c3c;  /* Red */
+    }
+    50% {
+        border: 4px solid #2ecc71;  /* Green */
+    }
+    75% {
+        border: 4px solid #f39c12;  /* Yellow */
+    }
+    100% {
+        border: 4px solid #3498db;  /* Blue */
+    }
+}
+
+/* Input Fields */
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Focused Input Fields */
+input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number Game</title>
+    <link rel="stylesheet" href="/project.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Guess the Number Game</h1>
+        <p>Try to guess the number between 1 and 100!</p>
+        <div class="input-section">
+            <input type="number" id="guessInput" placeholder="Enter your guess" />
+            <button onclick="checkGuess()">Guess</button>
+        </div>
+        <p id="feedback"></p>
+        <button class="reset-btn" onclick="resetGame()">Start a New Game</button>
+        
+        <!-- Logout Button -->
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>
